@@ -18,10 +18,16 @@ editableList = [
 
 focusHandler = (e)->
   if e.target.isContentEditable
+    console.log("No handle")
     noHandle = true
   else if e.target.nodeName.toLowerCase() == "input" and e.target.type.toLowerCase() in editableList
+    console.log("No handle")
+    noHandle = true
+  else if e.target.nodeName.toLowerCase() == "textarea"
+    console.log("No handle")
     noHandle = true
   else
+    console.log("Handle")
     nohandle = false
 
 keypressHandler = (e)->
